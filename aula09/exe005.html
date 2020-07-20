@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(45, 119, 180);
+            color: greenyellow;
+            font : normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>DOM em javascript</p>
+
+    <div id='msg'>Clique em mim</div>
+    <script>
+        //document object model, dentro do navegador
+        //dentro de uma window, location url, document, history navegação
+        //document tem o html, head e o body
+        //window.document.write(window.document.URL);
+        /**
+         * selecionando por Marca:
+         * getElementsByTagName()
+         * 
+         */
+        var p1 = window.document.getElementsByTagName('p')[0];
+        window.document.write('Esta escrito assim: '+p1.innerText);//inner text, texto que existe dentro da tag
+        p1.style.color='black';
+         /**
+         * getElementById()
+         * getElementsByName()
+         * getElementsByClass
+         * Com selecttor
+         * window.document.querySelector(div$img)
+         */
+        var d = window.document.getElementById('msg');
+        d.style.background='green';
+        d.innerText='Estou aguardando...'
+    </script>
+</body>
+</html>
